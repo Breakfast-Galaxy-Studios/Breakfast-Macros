@@ -21,7 +21,7 @@ Breakfast Macros is a Windows-only macro handler for a second keyboard. It allow
 For your first install, interception ***MUST*** be installed.  The installer will prompt you to install it. You will have to restart your computer for interception to be fully installed.
 
 ### Application
-Download the *latest* `macros-installer.bat` [here](https://github.com/Breakfast-Galaxy-Studios/Breakfast-Macros/releases/latest), then run the batch file by clicking on it. Follow the steps from the installer!
+Download the *latest* `macros-installer.zip` [here](https://github.com/Breakfast-Galaxy-Studios/Breakfast-Macros/releases/latest), then run the batch file by clicking on it. Follow the steps from the installer!
 
 ### Uninstalling
 Uninstalling can be done by deleting the folder containing the application exe and all it's dependancies.  
