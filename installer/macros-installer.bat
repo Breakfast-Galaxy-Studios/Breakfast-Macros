@@ -31,7 +31,9 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 
-Set LATEST_REPO_LINK="https://github.com/Breakfast-Galaxy-Studios/Breakfast-Macros/releases/download/test/app.zip"
+Set LATEST_REPO_LINK="https://github.com/Breakfast-Galaxy-Studios/Breakfast-Macros/releases/download/1.0/app.zip"
+
+echo Choose a folder to install macros in
 
 for /f "delims=" %%I in ('cscript /nologo /e:jscript "%~f0"') do (
     echo You chose %%I
@@ -39,8 +41,6 @@ for /f "delims=" %%I in ('cscript /nologo /e:jscript "%~f0"') do (
 )
 
 cd /D %macrosPath%
-mkdir %macrosPath%
-cd %macrosPath%
 
 @echo %macrosPath%
 
@@ -57,8 +57,8 @@ goto :startmenuchoice
 :makestartshortcut
 echo Creating Start Menu shortcut...
 set shortcutlocation="%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Breakfast Macros.lnk"
-set targetpath="%macrosPath%\macros.exe"
-set icon="%macrosPath%\resources\logo.ico"
+set targetpath="%macrosPath%\Breakfast Macros\macros.exe"
+set icon="%macrosPath%\Breakfast Macros\resources\logo.ico"
 
 powershell "$s=(New-Object -COM WScript.Shell).CreateShortcut('%shortcutlocation%');$s.IconLocation='%icon%';$s.TargetPath='%targetpath%';$s.Save()"
 
@@ -70,8 +70,8 @@ goto :shortcutchoice
 
 :makeshortcut
 echo Creating Shortcut...
-set targetpath="%macrosPath%\macros.exe"
-set icon="%macrosPath%\resources\logo.ico"
+set targetpath="%macrosPath%\Breakfast Macros\macros.exe"
+set icon="%macrosPath%\Breakfast Macros\resources\logo.ico"
 
 for /f "delims=" %%I in ('cscript /nologo /e:jscript "%~f0"') do (
     echo You chose %%I
@@ -106,5 +106,5 @@ goto :startmenuchoice
 :: JScript portion */
 
 var shl = new ActiveXObject("Shell.Application");
-var folder = shl.BrowseForFolder(0, "Please choose a folder.", 0, 0x00);
+var folder = shl.BrowseForFolder(0, "Choose where you want macros to be installed", 0, 0x00);
 WSH.Echo(folder ? folder.self.path : '');
