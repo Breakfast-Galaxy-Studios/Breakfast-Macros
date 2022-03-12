@@ -16,6 +16,7 @@ Breakfast Macros is a Windows-only macro handler for a second keyboard. It allow
 
 ## Installation
 > Make sure all above requirements are met.  
+> If you run into an error saying that VCRUNTIME140_1.dll is missing, install the x64 version from [here.](https://aka.ms/vs/17/release/vc_redist.x64.exe) This can also be found and installed [here](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170).
 
 ### Interception
 For your first install, interception ***MUST*** be installed.  The installer will prompt you to install it. You will have to restart your computer for interception to be fully installed.
