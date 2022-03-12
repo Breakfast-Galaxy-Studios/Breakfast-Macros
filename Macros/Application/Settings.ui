@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Settings</class>
+ <widget class="QWidget" name="Settings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>200</height>
+   </rect>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>120</green>
+        <blue>215</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>240</red>
+        <green>240</green>
+        <blue>240</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>120</green>
+        <blue>215</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MacroApp.qrc">
+    <normaloff>:/MacroApp/logo.png</normaloff>:/MacroApp/logo.png</iconset>
+  </property>
+  <widget class="QLabel" name="settingsLabel">
+   <property name="geometry">
+    <rect>
+     <x>151</x>
+     <y>0</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>18</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="currentID">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>221</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Current Device ID: -1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="openOnStartupLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>75</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Open On Startup:</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="openOnStartupBox">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>75</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="darkModeLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>150</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Dark Mode: </string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="darkModeBox">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>150</y>
+     <width>21</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="versionLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>175</y>
+     <width>381</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Version: Alpha1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="minimizeToTrayLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Minimize To Tray:</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="minimizeToTrayBox">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>98</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="minimizeOnStartLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>125</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Minimize On Start:</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="minimizeOnStartBox">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>125</y>
+     <width>31</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="debugModeBox">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>174</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Debug Mode</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="registerDeviceButton">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>46</y>
+     <width>101</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Register Device</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="typeNonMacroKeys">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>75</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Type Non Macro Keys</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="resetDeviceIDButton">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>46</y>
+     <width>111</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Reset Device ID</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="currentKeyToAppendLabel">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>125</y>
+     <width>231</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Current Key to Append: NONE</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="changeAppendedKeyButton">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>150</y>
+     <width>101</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Change Key</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="clearAppendedKeyButton">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>150</y>
+     <width>111</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Clear Key</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MacroApp.qrc"/>
+ </resources>
+ <connections/>
+</ui>

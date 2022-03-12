@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeviceUI</class>
+ <widget class="QWidget" name="DeviceUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>200</width>
+    <height>116</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MacroApp.qrc">
+    <normaloff>:/MacroApp/logo.png</normaloff>:/MacroApp/logo.png</iconset>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>180</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Press any key on the keyboard you want intercepted...</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::RichText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MacroApp.qrc"/>
+ </resources>
+ <connections/>
+</ui>

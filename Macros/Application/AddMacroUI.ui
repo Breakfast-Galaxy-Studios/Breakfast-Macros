@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddMacroUI</class>
+ <widget class="QWidget" name="AddMacroUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>250</width>
+    <height>100</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>New Macro</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MacroApp.qrc">
+    <normaloff>:/MacroApp/logo.png</normaloff>:/MacroApp/logo.png</iconset>
+  </property>
+  <widget class="QPushButton" name="yesButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>71</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>yes?</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="noButton">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>70</y>
+     <width>71</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>NOPE</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="enterNameLabel">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>10</y>
+     <width>170</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>    Enter a name for the macro</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="nameInputBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MacroApp.qrc"/>
+ </resources>
+ <connections/>
+</ui>

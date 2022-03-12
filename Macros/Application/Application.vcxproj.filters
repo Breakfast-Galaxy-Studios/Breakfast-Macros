@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{d6d66f23-21e3-4f3e-8a9d-983885e58a0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Headers">
+      <UniqueIdentifier>{de75765f-81e9-4a8d-a88b-402975b9d243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interception">
+      <UniqueIdentifier>{7baf2ac8-7936-4bd8-893d-277ab65414d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="backend">
+      <UniqueIdentifier>{e336fbb3-0d1d-475f-840b-4532df5e87a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="backend\headers">
+      <UniqueIdentifier>{28c361a6-7a4e-49bd-ac94-4a9be7eb2974}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceUI.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MacroEditorUI.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MacroApp.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionEditor.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="interception.c">
+      <Filter>interception</Filter>
+    </ClCompile>
+    <ClCompile Include="iutils.c">
+      <Filter>interception</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="FileManager.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="MacroManager.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionHandler.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="AddMacroUI.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="VirtualKeyboard.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Converter.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="InterceptionHandler.cpp">
+      <Filter>backend</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Settings.h">
+      <Filter>UI\Headers</Filter>
+    </QtMoc>
+    <QtMoc Include="ActionEditor.h">
+      <Filter>UI\Headers</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceUI.h">
+      <Filter>UI\Headers</Filter>
+    </QtMoc>
+    <QtMoc Include="MacroApp.h">
+      <Filter>UI\Headers</Filter>
+    </QtMoc>
+    <QtMoc Include="AddMacroUI.h">
+      <Filter>UI\Headers</Filter>
+    </QtMoc>
+    <QtMoc Include="MacroEditorUI.h">
+      <Filter>UI\Headers</Filter>
+    </QtMoc>
+    <QtMoc Include="VirtualKeyboard.h">
+      <Filter>UI\Headers</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ActionEditor.ui">
+      <Filter>UI\Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DeviceUI.ui">
+      <Filter>UI\Form Files</Filter>
+    </QtUic>
+    <QtUic Include="MacroApp.ui">
+      <Filter>UI\Form Files</Filter>
+    </QtUic>
+    <QtUic Include="MacroEditorUI.ui">
+      <Filter>UI\Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Settings.ui">
+      <Filter>UI\Form Files</Filter>
+    </QtUic>
+    <QtUic Include="AddMacroUI.ui">
+      <Filter>UI\Form Files</Filter>
+    </QtUic>
+    <QtUic Include="VirtualKeyboard.ui">
+      <Filter>UI\Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="intercept.h">
+      <Filter>interception</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionHandler.h">
+      <Filter>backend\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="intutils.h">
+      <Filter>backend\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>backend\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MacroManager.h">
+      <Filter>backend\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>backend\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="FileManager.h">
+      <Filter>backend\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter.h">
+      <Filter>backend\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="InterceptionHandler.h">
+      <Filter>backend\headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="iconwhite.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="logo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="iconblack.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="MacroApp.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+</Project>

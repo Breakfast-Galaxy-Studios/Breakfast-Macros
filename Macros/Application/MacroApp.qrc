@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="MacroApp">
+    <file>iconblack.png</file>
+    <file>logo.png</file>
+    <file>iconwhite.png</file>
+  </qresource>
+</RCC>

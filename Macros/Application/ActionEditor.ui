@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ActionEditor</class>
+ <widget class="QWidget" name="ActionEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Action Editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MacroApp.qrc">
+    <normaloff>:/MacroApp/logo.png</normaloff>:/MacroApp/logo.png</iconset>
+  </property>
+  <widget class="QLabel" name="actionIDLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>18</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Action Name:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="actionTypeLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>48</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Action Type:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="actionTypeBox">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>48</y>
+     <width>271</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Fake Keypresses</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Open Program</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>No Action</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="pathToProgramLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>78</y>
+     <width>101</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Path To Program:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="areKeysHeldLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>108</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Are Keys Held:</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="areKeysHeldBox">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>108</y>
+     <width>16</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="keysToPressBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>291</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="isWrapping" stdset="0">
+    <bool>false</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="keysToPressLabel">
+   <property name="geometry">
+    <rect>
+     <x>115</x>
+     <y>137</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Keys to Press</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addKeyButton">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>180</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add Key</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="deleteKeyButton">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>210</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete Key</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="actionNameText">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>20</y>
+     <width>271</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="programPathBox">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>78</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="saveButton">
+   <property name="geometry">
+    <rect>
+     <x>165</x>
+     <y>270</y>
+     <width>70</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>SAVE</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="chooseFileButton">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>78</y>
+     <width>71</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Choose File</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MacroApp.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,3394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VirtualKeyboard</class>
+ <widget class="QWidget" name="VirtualKeyboard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Key Choser</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MacroApp.qrc">
+    <normaloff>:/MacroApp/logo.png</normaloff>:/MacroApp/logo.png</iconset>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>401</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>3</number>
+   </property>
+   <widget class="QWidget" name="tab_AZ">
+    <attribute name="title">
+     <string>A-Z</string>
+    </attribute>
+    <widget class="QPushButton" name="a_button">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>A</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="instructionLabel">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>0</y>
+       <width>281</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Click the character you want</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="b_button">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>B</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="c_button">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>C</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="d_button">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>D</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="e_button">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>E</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f_button">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="l_button">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>L</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="k_button">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>K</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="g_button">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>G</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="j_button">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>J</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="h_button">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>H</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="i_button">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>I</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="p_button">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>P</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r_button">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>R</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="m_button">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>M</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="n_button">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>N</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="o_button">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>O</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="q_button">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Q</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="s_button">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>S</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="u_button">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>U</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="w_button">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>W</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="t_button">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>T</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="x_button">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>X</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="v_button">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>V</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="y_button">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>298</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Y</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="z_button">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>298</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Z</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_Numbers">
+    <attribute name="title">
+     <string>Numbers</string>
+    </attribute>
+    <widget class="QLabel" name="instructionLabel_2">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>0</y>
+       <width>291</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Click the character you want</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r0_button">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r1_button">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r2_button">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>2</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r3_button">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>3</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r4_button">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>4</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r5_button">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>5</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r7_button">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>7</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r8_button">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>8</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r9_button">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>9</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num0_button">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Num0</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num1_button">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Num1</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r6_button">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>6</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num3_button">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Num3</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num7_button">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Num7</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num4_button">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Num4</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num5_button">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Num5</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num6_button">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Num6</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num2_button">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Num2</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num8_button">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Num8</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num9_button">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Num9</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_Punctuation">
+    <attribute name="title">
+     <string>Punctuation</string>
+    </attribute>
+    <widget class="QLabel" name="instructionLabel_3">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>0</y>
+       <width>281</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Click the character you want</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r6_button_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>]</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r2_button_2">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>.</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r8_button_2">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>\</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r3_button_2">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>,</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r0_button_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>`</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num4_button_2">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Num+</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r1_button_2">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>/</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r4_button_2">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>'</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num3_button_2">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Num-</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num0_button_2">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>-</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r7_button_2">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>[</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num1_button_2">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Num/</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num2_button_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Num*</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r5_button_2">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>;</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r9_button_2">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>=</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="num4_button_3">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Num.</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_function">
+    <attribute name="title">
+     <string>Function Keys</string>
+    </attribute>
+    <widget class="QLabel" name="instructionLabel_4">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>0</y>
+       <width>271</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Click the character you want</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f1_button">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F1</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f2_button">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F2</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f3_button">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F3</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f4_button">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F4</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f5_button">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F5</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f6_button">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F6</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f7_button">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F7</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f8_button">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F8</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f10_button">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F10</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f12_button">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F12</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f9_button">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F9</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f11_button">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F11</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f15_button">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F15</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f13_button">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F13</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f17_button">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F17</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f16_button">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F16</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f14_button">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F14</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f18_button">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F18</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f21_button">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F21</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f23_button">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F23</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f24_button">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F24</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f20_button">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F20</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f22_button">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F22</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f19_button">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>F19</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_other">
+    <attribute name="title">
+     <string>Other</string>
+    </attribute>
+    <widget class="QLabel" name="instructionLabel_5">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>0</y>
+       <width>291</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Click the character you want</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="l_button_2">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Right
+Alt</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="h_button_2">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Left
+Ctrl</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="d_button_2">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Caps
+Lock</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="a_button_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Escape</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="y_button_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>298</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Volume
+Up</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="n_button_2">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Print
+Screen</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f_button_2">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Left
+Shift</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="k_button_2">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Space</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="g_button_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Right
+Shift</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="z_button_2">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>298</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Volume
+Down</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="w_button_2">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Left
+Arrow</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="r_button_2">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Delete</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="q_button_2">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Page Up</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="j_button_2">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Left
+Alt</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="i_button_2">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Windows</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="e_button_2">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Enter</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="x_button_2">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Down
+Arrow</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="t_button_2">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Page
+Down</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="o_button_2">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Insert</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="s_button_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>End</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="u_button_2">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Right
+Arrow</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="p_button_2">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Home</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="c_button_2">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Tab</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="m_button_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>174</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Right
+Ctrl</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="b_button_2">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Back
+Space</string>
+     </property>
+     <property name="autoRepeat">
+      <bool>false</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="v_button_2">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>236</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Up
+Arrow</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="z_button_3">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>298</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Volume
+Mute</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="z_button_4">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>298</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Media
+Next
+Track</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="z_button_5">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>298</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Media
+Prev
+Track</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="z_button_6">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>298</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Media
+Stop</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_other2">
+    <attribute name="title">
+     <string>Other 2</string>
+    </attribute>
+    <widget class="QLabel" name="instructionLabel_6">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>0</y>
+       <width>301</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Click the character you want</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="a_button_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Toggle
+Media</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="c_button_3">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>EREOF</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="j_button_3">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Browser
+Refresh</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="d_button_3">
+     <property name="geometry">
+      <rect>
+       <x>196</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>End
+Current
+Task</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="e_button_3">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Kana</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="b_button_3">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Context
+Menu</string>
+     </property>
+     <property name="autoRepeat">
+      <bool>false</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="h_button_3">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Mode
+Change</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="k_button_3">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Jisho</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="i_button_3">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Browser
+Home</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="g_button_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>112</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Non
+Convert</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="f_button_3">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>50</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Kanji</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MacroApp.qrc"/>
+ </resources>
+ <connections/>
+</ui>
