@@ -1,3 +1,4 @@
+# THIS IS NOT RELEASED YET. THIS IS STILL IN BETA AND VERY LIKELY WILL NOT WORK.
 # Breakfast Macros
 Breakfast Macros is a Windows-only macro handler for a second keyboard. It allows you to use a second keyboard as a macro keyboard and intercepts all keypresses from the selected keyboard. This program was mostly inspired by AutoHotKey and was created to make it easier to make basic hotkeys for a second keyboard. If you want a very advanced hotkey solution that can even control the time between fake keypresses, this is not the program for you. We plan on adding more features in the future. Since this program is new, you might encounter bugs. If you report a bug to us, we’ll fix it as soon as possible and ship out a new version.
 
