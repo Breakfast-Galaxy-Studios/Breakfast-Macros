@@ -1,0 +1,76 @@
+﻿  Reading Qt configuration (D:/sdks/qtnew/6.2.2/msvc2019_64/bin/qmake)
+  uic ActionEditor.ui
+  uic AddMacroUI.ui
+  uic DeviceUI.ui
+  uic MacroApp.ui
+  uic MacroEditorUI.ui
+  uic Settings.ui
+  uic VirtualKeyboard.ui
+  rcc MacroApp.qrc
+  moc ActionEditor.h
+  moc VirtualKeyboard.h
+  moc AddMacroUI.h
+  moc Settings.h
+  moc MacroEditorUI.h
+  moc MacroApp.h
+  moc DeviceUI.h
+  ActionEditor.cpp
+  ActionHandler.cpp
+  AddMacroUI.cpp
+  Converter.cpp
+  DeviceUI.cpp
+  FileManager.cpp
+  MacroApp.cpp
+  MacroEditorUI.cpp
+  MacroManager.cpp
+  main.cpp
+  InterceptionHandler.cpp
+  Settings.cpp
+  Utils.cpp
+  VirtualKeyboard.cpp
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\AddMacroUI.cpp(16,24): warning C4129: '-': unrecognized character escape sequence
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\AddMacroUI.cpp(16,24): warning C4129: '.': unrecognized character escape sequence
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\ActionEditor.cpp(15,28): warning C4129: '-': unrecognized character escape sequence
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\ActionEditor.cpp(15,28): warning C4129: '.': unrecognized character escape sequence
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\MacroEditorUI.cpp(20,28): warning C4129: '-': unrecognized character escape sequence
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\MacroEditorUI.cpp(20,28): warning C4129: '.': unrecognized character escape sequence
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\Settings.cpp(48,10): warning C4834: discarding return value of function with 'nodiscard' attribute
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\InterceptionHandler.cpp(53): warning C4700: uninitialized local variable 'a' used
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\InterceptionHandler.cpp(82): warning C4700: uninitialized local variable 'a' used
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\InterceptionHandler.cpp(147): warning C4715: 'thread_interception': not all control paths return a value
+  interception.c
+  iutils.c
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winbase.h(9531,5): warning C5105: macro expansion producing 'defined' has undefined behavior (compiling source file iutils.c)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winbase.h(9531,5): warning C5105: macro expansion producing 'defined' has undefined behavior (compiling source file interception.c)
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\intercept.h(162,42): message : see previous definition of 'interception_create_context' (compiling source file interception.c)
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\intercept.h(164,27): message : see previous definition of 'interception_destroy_context' (compiling source file interception.c)
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\intercept.h(166,45): message : see previous definition of 'interception_get_precedence' (compiling source file interception.c)
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\intercept.h(168,27): message : see previous definition of 'interception_set_precedence' (compiling source file interception.c)
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\intercept.h(170,41): message : see previous definition of 'interception_get_filter' (compiling source file interception.c)
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\intercept.h(172,27): message : see previous definition of 'interception_set_filter' (compiling source file interception.c)
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\intercept.h(174,41): message : see previous definition of 'interception_wait' (compiling source file interception.c)
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\intercept.h(176,41): message : see previous definition of 'interception_wait_with_timeout' (compiling source file interception.c)
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\intercept.h(178,26): message : see previous definition of 'interception_send' (compiling source file interception.c)
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\intercept.h(180,26): message : see previous definition of 'interception_receive' (compiling source file interception.c)
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\intercept.h(182,35): message : see previous definition of 'interception_get_hardware_id' (compiling source file interception.c)
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\intercept.h(184,26): message : see previous definition of 'interception_is_invalid' (compiling source file interception.c)
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\intercept.h(186,26): message : see previous definition of 'interception_is_keyboard' (compiling source file interception.c)
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\intercept.h(188,26): message : see previous definition of 'interception_is_mouse' (compiling source file interception.c)
+  qrc_MacroApp.cpp
+  moc_ActionEditor.cpp
+  moc_VirtualKeyboard.cpp
+  moc_AddMacroUI.cpp
+  moc_Settings.cpp
+  moc_MacroEditorUI.cpp
+  moc_MacroApp.cpp
+  moc_DeviceUI.cpp
+     Creating library D:\dev\breakfast\Breakfast-Macros\Macros\x64\Debug\Application.lib and object D:\dev\breakfast\Breakfast-Macros\Macros\x64\Debug\Application.exp
+LINK : warning LNK4217: symbol 'interception_create_context' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"void __cdecl setupInterception(void)" (?setupInterception@@YAXXZ)'
+LINK : warning LNK4217: symbol 'interception_destroy_context' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"void __cdecl cleanupInterception(void)" (?cleanupInterception@@YAXXZ)'
+LINK : warning LNK4217: symbol 'interception_set_filter' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"unsigned long __cdecl thread_interception(void *)" (?thread_interception@@YAKPEAX@Z)'
+LINK : warning LNK4217: symbol 'interception_wait' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"unsigned long __cdecl thread_interception(void *)" (?thread_interception@@YAKPEAX@Z)'
+LINK : warning LNK4217: symbol 'interception_send' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"unsigned long __cdecl thread_interception(void *)" (?thread_interception@@YAKPEAX@Z)'
+LINK : warning LNK4217: symbol 'interception_receive' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"unsigned long __cdecl thread_interception(void *)" (?thread_interception@@YAKPEAX@Z)'
+LINK : warning LNK4217: symbol 'interception_get_hardware_id' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"unsigned long __cdecl thread_interception(void *)" (?thread_interception@@YAKPEAX@Z)'
+LINK : warning LNK4217: symbol 'interception_is_keyboard' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"unsigned long __cdecl thread_interception(void *)" (?thread_interception@@YAKPEAX@Z)'
+  Application.vcxproj -> D:\dev\breakfast\Breakfast-Macros\Macros\x64\Debug\Application.exe
