@@ -123,22 +123,25 @@ void BackendUtils::checkForUpdates() {
 			MessageBox(NULL, temp.c_str(), L"Update Error", MB_OK);
 			return;
 		}
+		try {
+			jsonResponse = json::parse(response_string);
+			std::string latestVersion = jsonResponse["tag_name"];
+			BackendUtils::findAndReplaceAll(latestVersion, "\"", "");
 
-		jsonResponse = json::parse(response_string);
-		std::string latestVersion = jsonResponse["tag_name"];
-		BackendUtils::findAndReplaceAll(latestVersion, "\"", "");
-
-		if (latestVersion != APP_VERSION) {
-			int msgboxID = MessageBox(NULL, L"A new version is availiable on the github.\nWould you like to get the new version?\nGetting a new version will close the app.", L"New Update Available", MB_YESNO);
-			switch (msgboxID)
-			{
-			case IDYES:
-				ShellExecute(NULL, L"open", L"https://github.com/Breakfast-Galaxy-Studios/Breakfast-Macros/releases", NULL, NULL, SW_SHOWNORMAL);
-				exit(666);
-				break;
+			if (latestVersion != APP_VERSION) {
+				int msgboxID = MessageBox(NULL, L"A new version is availiable on the github.\nWould you like to get the new version?\nGetting a new version will close the app.", L"New Update Available", MB_YESNO);
+				switch (msgboxID)
+				{
+				case IDYES:
+					ShellExecute(NULL, L"open", L"https://github.com/Breakfast-Galaxy-Studios/Breakfast-Macros/releases", NULL, NULL, SW_SHOWNORMAL);
+					exit(666);
+					break;
+				}
 			}
 		}
-
+		catch (std::exception ignore) {
+			MessageBox(NULL, L"The app could not check for updates.\nFailed to parse JSON.", L"Update Error", MB_OK);
+		}
 	}
 	else {
 		MessageBox(NULL, L"The app could not check for updates.\nCurl failed to init.", L"Update Error", MB_OK);

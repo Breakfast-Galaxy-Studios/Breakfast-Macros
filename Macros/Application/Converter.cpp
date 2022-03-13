@@ -172,7 +172,7 @@ std::string Converter::virtualCodeToString(VirtualKeycode vk) {
 	}
 RawKey Converter::stringToRaw(std::string text) {
 		RawKey toReturn;
-		toReturn.code = -1;
+		toReturn.code = 0;
 		if (text == "A") toReturn.code = 30;
 		else if (text == "B") toReturn.code = 48;
 		else if (text == "C") toReturn.code = 46;
@@ -271,7 +271,7 @@ RawKey Converter::stringToRaw(std::string text) {
 		else if (text == "Down\nArrow") { toReturn.code = 80; toReturn.state = 2; }
 		else if (text == "Context\nMenu") { toReturn.code = 93; toReturn.state = 2; }
 		else if (text == "Num.") { toReturn.code = 83; }
-		else toReturn.code = -1;
+		else toReturn.code = 0;
 		return toReturn;
 	}
 VirtualKeycode Converter::s2virtual1(std::string text) {
@@ -397,7 +397,7 @@ VirtualKeycode Converter::s2virtual1(std::string text) {
 		else if (text == "Kana") return 0x15;
 		else if (text == "Kanji") return 0x19;
 		else if (text == "Non\nConvert") return 0x1D;
-		else return -1;
+		else return 0;
 	}
 void Converter::s2virtual2(std::string text, VirtualKeycode& vk) {
 		if (text == "Mode\nChange") vk = 0x1F;

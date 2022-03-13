@@ -35,7 +35,7 @@ void VirtualKeyboard::setRegisterer(int registerer) {
 
 void VirtualKeyboard::resetGUI() {
 	ui.tabWidget->setCurrentIndex(0);
-	pressedKeycode = -1;
+	pressedKeycode = 0;
 }
 
 VirtualKeyboard::~VirtualKeyboard() {}

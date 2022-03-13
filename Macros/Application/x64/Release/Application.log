@@ -1,0 +1,15 @@
+﻿  Reading Qt configuration (D:/sdks/qtnew/6.2.2/msvc2019_64/bin/qmake)
+  InterceptionHandler.cpp
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\InterceptionHandler.cpp(152): warning C4715: 'thread_interception': not all control paths return a value
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\InterceptionHandler.cpp(85): warning C4700: uninitialized local variable 'args' used
+D:\dev\breakfast\Breakfast-Macros\Macros\Application\InterceptionHandler.cpp(53): warning C4700: uninitialized local variable 'a' used
+     Creating library D:\dev\breakfast\Breakfast-Macros\Macros\x64\Release\Application.lib and object D:\dev\breakfast\Breakfast-Macros\Macros\x64\Release\Application.exp
+LINK : warning LNK4217: symbol 'interception_create_context' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"void __cdecl setupInterception(void)" (?setupInterception@@YAXXZ)'
+LINK : warning LNK4217: symbol 'interception_destroy_context' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"void __cdecl cleanupInterception(void)" (?cleanupInterception@@YAXXZ)'
+LINK : warning LNK4217: symbol 'interception_set_filter' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"unsigned long __cdecl thread_interception(void *)" (?thread_interception@@YAKPEAX@Z)'
+LINK : warning LNK4217: symbol 'interception_wait' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"unsigned long __cdecl thread_interception(void *)" (?thread_interception@@YAKPEAX@Z)'
+LINK : warning LNK4217: symbol 'interception_send' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"unsigned long __cdecl thread_interception(void *)" (?thread_interception@@YAKPEAX@Z)'
+LINK : warning LNK4217: symbol 'interception_receive' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"unsigned long __cdecl thread_interception(void *)" (?thread_interception@@YAKPEAX@Z)'
+LINK : warning LNK4217: symbol 'interception_get_hardware_id' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"unsigned long __cdecl thread_interception(void *)" (?thread_interception@@YAKPEAX@Z)'
+LINK : warning LNK4217: symbol 'interception_is_keyboard' defined in 'interception.obj' is imported by 'InterceptionHandler.obj' in function '"unsigned long __cdecl thread_interception(void *)" (?thread_interception@@YAKPEAX@Z)'
+  Application.vcxproj -> D:\dev\breakfast\Breakfast-Macros\Macros\x64\Release\Application.exe

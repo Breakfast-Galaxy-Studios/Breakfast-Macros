@@ -55,7 +55,7 @@ void SettingsUI::updateGUI() {
 	ui.typeNonMacroKeys->setChecked(typeNonMacroKeys);
 	tmp_str = "Current Key to Append: ";
 	if (keyToAppend > 0) {
-		tmp_str += std::to_string(keyToAppend);
+		tmp_str += Converter::virtualCodeToString(keyToAppend);
 	}
 	else {
 		tmp_str += "N/A";
@@ -131,12 +131,12 @@ void SettingsUI::registerKeyAction() {
 
 void SettingsUI::reigsterNewAppendedKey(int key) {
 	Logger::print("Updating keyToAppend var. New value: ", key);
-	if (!isRegistering()) setInterceptionState(InterceptionState::STOPPED);
+	setInterceptionState(InterceptionState::STOPPED);
 	keyToAppend = key;
 	fileManager.updateConfig();
 
 	updateGUI();
-	if (!isRegistering()) setInterceptionState(InterceptionState::INTERCEPTING);
+	setInterceptionState(InterceptionState::INTERCEPTING);
 }
 
 void SettingsUI::clearAppendedKey() {

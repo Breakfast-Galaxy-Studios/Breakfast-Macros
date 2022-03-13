@@ -64,6 +64,7 @@ void cleanupInterception() {
 	}
 	catch (std::exception ex) {}
 	interception_destroy_context(context);
+	do {} while (interceptionHandle);
 	Logger::print("Interception has been cleaned up.", "");
 }
 
@@ -78,8 +79,10 @@ void setInterceptionState(InterceptionState newState) {
 		}
 		catch (std::exception ex) {}
 		interceptionThreadID++;
-		PTHREADARGS a;
-		interceptionHandle = CreateThread(NULL, 0, thread_interception, a, 0, &interceptionThreadID);
+		PTHREADARGS args;
+
+		do {} while (interceptionHandle);
+		interceptionHandle = CreateThread(NULL, 0, thread_interception, args, 0, &interceptionThreadID);
 	}
 }
 
@@ -105,10 +108,10 @@ DWORD WINAPI thread_interception(LPVOID lpParam) {
 		while (interception_receive(context, device = interception_wait(context), (InterceptionStroke*)&stroke, 1) > 0) {
 			size_t pressedDeviceID = interception_get_hardware_id(context, device, hardware_id, sizeof(hardware_id));
 			if (deviceID == pressedDeviceID) {
-				std::cout << stroke.code << std::endl;
+				//std::cout << stroke.code << std::endl;
 				bool hasMacro = false;
 				for (Macro* macro : macroManager.getMacros()) {
-					if (macro != nullptr && macro->isEnabled() && stroke == Converter::virtualCodeToRaw(macro->getRequiredKey())) {
+					if (macro != nullptr && macro->isEnabled() && Converter::rawCodeToVirtual(stroke) == macro->getRequiredKey()) {
 						for (auto action : macro->getActions()) if (action != nullptr) action->run();
 						hasMacro = true;
 					}
@@ -144,4 +147,6 @@ DWORD WINAPI thread_interception(LPVOID lpParam) {
 		setInterceptionState(InterceptionState::INTERCEPTING);
 		return 1;
 	}
+
+	Logger::print("Interception state is STOPPED.", "");
 }

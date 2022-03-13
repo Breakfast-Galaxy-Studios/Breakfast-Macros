@@ -59,8 +59,9 @@ echo Creating Start Menu shortcut...
 set shortcutlocation="%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Breakfast Macros.lnk"
 set targetpath="%macrosPath%\Breakfast Macros\macros.exe"
 set icon="%macrosPath%\Breakfast Macros\resources\logo.ico"
+set workingdir="%macrosPath%\Breakfast Macros"
 
-powershell "$s=(New-Object -COM WScript.Shell).CreateShortcut('%shortcutlocation%');$s.IconLocation='%icon%';$s.TargetPath='%targetpath%';$s.Save()"
+powershell "$s=(New-Object -COM WScript.Shell).CreateShortcut('%shortcutlocation%');$s.WorkingDirectory='%workingdir%';$s.IconLocation='%icon%';$s.TargetPath='%targetpath%';$s.Save()"
 
 :shortcutchoice
 set /P c=Would you like a desktop or a shortcut in another folder? [Y/N]?
@@ -72,13 +73,13 @@ goto :shortcutchoice
 echo Creating Shortcut...
 set targetpath="%macrosPath%\Breakfast Macros\macros.exe"
 set icon="%macrosPath%\Breakfast Macros\resources\logo.ico"
-
+set workingdir="%macrosPath%\Breakfast Macros"
 for /f "delims=" %%I in ('cscript /nologo /e:jscript "%~f0"') do (
     echo You chose %%I
     Set shortcutlocation="%%I\Breakfast Macros.lnk"
 )
 
-powershell "$s=(New-Object -COM WScript.Shell).CreateShortcut('%shortcutlocation%');$s.IconLocation='%icon%';$s.TargetPath='%targetpath%';$s.Save()"
+powershell "$s=(New-Object -COM WScript.Shell).CreateShortcut('%shortcutlocation%');$s.WorkingDirectory='%workingdir%';$s.IconLocation='%icon%';$s.TargetPath='%targetpath%';$s.Save()"
 
 :interceptionchoice
 
