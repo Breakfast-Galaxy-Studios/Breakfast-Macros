@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for this app.
 title: "[REQUEST]"
-labels: enhancement
+labels: feature request
 assignees: gwerrry, MalTheLegend104
 
 ---
