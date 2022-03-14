@@ -40,7 +40,7 @@ for /f "delims=" %%I in ('cscript /nologo /e:jscript "%~f0"') do (
     Set macrosPath=%%I
 )
 
-cd /D %macrosPath%
+cd /D "%macrosPath%"
 
 @echo %macrosPath%
 
@@ -48,7 +48,7 @@ cd /D %macrosPath%
 
 curl -LO %LATEST_REPO_LINK%
 
-powershell Expand-Archive app.zip -DestinationPath "%macrosPath%" -Force
+powershell Expand-Archive app.zip -DestinationPath '%macrosPath%' -Force
 
 del app.zip
 
