@@ -17,7 +17,7 @@ Breakfast Macros is a Windows-only macro handler for a second keyboard. It allow
 ## Installation
 > Make sure all above requirements are met.  
 > If you run into an error saying that a dll is missing, install the x64 version from [here.](https://aka.ms/vs/17/release/vc_redist.x64.exe) This can also be found and installed [here](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170).  
-> If you install Macros in a system folder like `Program Files`, you need to make your shortcuts always run as administrator.
+> If you install Macros in a system folder like `Program Files`, you need to make your shortcuts always run as administrator.<details><summary>Change shortcut to run as admin</summary><p>1. Right-click on the shortcut, then select Properties from the drop-down menu.<br>2. Click the Advanced button.<br>3. Check the box beside Run as administrator.<br>4. Click OK, then click OK again.<br><b><i>MAKE SURE TO DO THIS FOR BOTH SHORTCUTS</b></i></p></details>
 
 ### Interception
 For your first install, interception ***MUST*** be installed.  The installer will prompt you to install it. You will have to restart your computer for interception to be fully installed.
