@@ -161,7 +161,7 @@ void MacroApp::settingsButtonAction() {
 }
 
 void MacroApp::newMacroButtonAction() {
-    if (!isRegistering() && isIntercepting()) {
+    if (!isRegistering()) {
         addMacroUI->reset();
         addMacroUI->setType(1);
         addMacroUI->show();

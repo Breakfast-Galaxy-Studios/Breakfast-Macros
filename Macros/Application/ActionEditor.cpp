@@ -96,6 +96,7 @@ void ActionEditor::setStyleSheet(const QString& styleSheet) {
 
 void ActionEditor::saveActionAction() {
 	if (currentAction != nullptr && !isRegistering()) {
+		setInterceptionState(InterceptionState::STOPPED);
 		currentAction->setName(ui.actionNameText->text().toStdString());
 
 		switch (ui.actionTypeBox->currentIndex()) {

@@ -20,11 +20,11 @@ public:
 	bool isEnabled();
 	std::string getName();
 	void setName(std::string newname);
-	void setKey(int newkey, bool autosave);
-	void setEnabled(bool status, bool autosave);
-	void removeAction(Action* toRemove, bool autosave);
-	void removeAction(std::string name, bool autosave);
-	void addAction(Action newAction, bool autosave);
+	void setKey(int newkey, bool autosave, bool startstopinterception);
+	void setEnabled(bool status, bool autosave, bool startstopinterception);
+	void removeAction(Action* toRemove, bool autosave, bool startstopinterception);
+	void removeAction(std::string name, bool autosave, bool startstopinterception);
+	void addAction(Action newAction, bool autosave, bool startstopinterception);
 	Action* getAction(std::string name);
 	void runActions();
 	void save();

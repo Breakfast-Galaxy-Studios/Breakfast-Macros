@@ -121,7 +121,7 @@ void FileManager::loadSettings() {
 		settingsFile.open(path);
 		Logger::print("CONFIG: Config doesn't exist... Creating new config.", "");
 
-		json baseFile = { {"openOnStartup", false}, {"darkMode", true},{"minimizeOnStart", false}, {"minimizeToTray", false}, {"deviceID", 0},{"typeNonMacroKeys", false}, {"keyToAppend", -1}, {"debugMode", false} }; std::ofstream fixedFile;
+		json baseFile = { {"openOnStartup", false}, {"darkMode", true},{"minimizeOnStart", false}, {"minimizeToTray", false}, {"deviceID", 0},{"typeNonMacroKeys", false}, {"keyToAppend", 0}, {"debugMode", false} }; std::ofstream fixedFile;
 
 		settingsFile << std::setw(4) << baseFile << std::endl;
 		settingsFile.close();
@@ -131,7 +131,7 @@ void FileManager::loadSettings() {
 		minimizeOnStart = false;
 		darkMode = true;
 		debugMode = false;
-		keyToAppend = -1;
+		keyToAppend = 0;
 		typeNonMacroKeys = false;
 		deviceID = 0;
 	}
@@ -146,7 +146,7 @@ void FileManager::loadSettings() {
 		catch (nlohmann::detail::parse_error e) {
 			Logger::print("CONFIG: Invalid config found. Resetting config.", "");
 
-			json baseFile = { {"openOnStartup", false}, {"darkMode", true},{"minimizeOnStart", false}, {"minimizeToTray", false}, {"deviceID", 0},{"typeNonMacroKeys", false}, {"keyToAppend", -1}, {"debugMode", false} }; std::ofstream fixedFile;
+			json baseFile = { {"openOnStartup", false}, {"darkMode", true},{"minimizeOnStart", false}, {"minimizeToTray", false}, {"deviceID", 0},{"typeNonMacroKeys", false}, {"keyToAppend", 0}, {"debugMode", false} }; std::ofstream fixedFile;
 			fixedFile.open(path);
 			fixedFile << std::setw(4) << baseFile << std::endl;
 			fixedFile.close();
@@ -157,7 +157,7 @@ void FileManager::loadSettings() {
 			darkMode = true;
 			debugMode = false;
 			typeNonMacroKeys = false;
-			keyToAppend = -1;
+			keyToAppend = 0;
 			deviceID = 0;
 			return;
 		}
@@ -268,13 +268,13 @@ void FileManager::loadSettings() {
 				keyToAppend = val;
 			}
 			else {
-				keyToAppend = -1;
+				keyToAppend = 0;
 			}
 			patch["keyToAppend"] = keyToAppend;
 		}
 		else {
-			patch["keyToAppend"] = -1;
-			keyToAppend = -1;
+			patch["keyToAppend"] = 0;
+			keyToAppend = 0;
 		}
 
 		/* TYPE NON MACRO KEYS CHECK */
@@ -335,7 +335,7 @@ void FileManager::loadMacros()          {
 
 			if (jsonFile.contains("keyToIntercept")) {
 				auto keyToIntercept = jsonFile.at("keyToIntercept");
-				if (BackendUtils::isIntegral<int>(keyToIntercept)) macro.setKey(keyToIntercept, false);
+				if (BackendUtils::isIntegral<int>(keyToIntercept)) macro.setKey(keyToIntercept, false, false);
 				else {
 					Logger::print("ERROR: Invalid Macro config at ", path, " keytoinercept option is bad.");
 				}
@@ -346,7 +346,7 @@ void FileManager::loadMacros()          {
 
 			if (jsonFile.contains("isEnabled")) {
 				auto isEnabled = jsonFile.at("isEnabled");
-				if (BackendUtils::isIntegral<bool>(isEnabled)) macro.setEnabled(isEnabled, false);
+				if (BackendUtils::isIntegral<bool>(isEnabled)) macro.setEnabled(isEnabled, false, false);
 				else {
 					Logger::print("ERROR: Failed to load enabled status at ", path, " isEnabled option is invalid.");
 				}
@@ -396,7 +396,7 @@ void FileManager::loadMacros()          {
 						}
 					}
 
-					macro.addAction(action, false);
+					macro.addAction(action, false, false);
 				}
 				
 			}

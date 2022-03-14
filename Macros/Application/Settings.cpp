@@ -140,7 +140,7 @@ void SettingsUI::reigsterNewAppendedKey(int key) {
 }
 
 void SettingsUI::clearAppendedKey() {
-	reigsterNewAppendedKey(-1);
+	reigsterNewAppendedKey(0);
 }
 SettingsUI::~SettingsUI()
 {

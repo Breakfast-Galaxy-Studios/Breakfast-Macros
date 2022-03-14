@@ -47,21 +47,21 @@ void Macro::setName(std::string newname) {
 	//this is special. we do not mess with this set name stuff unless loading an action from a file
 	name = newname;
 }
-void Macro::setKey(int newkey, bool autosave) { 
+void Macro::setKey(int newkey, bool autosave, bool startstopinterception) { 
 	if (isIntercepting()) {
-		setInterceptionState(InterceptionState::STOPPED);
+		if(startstopinterception) setInterceptionState(InterceptionState::STOPPED);
 		keyToPress = newkey;
-		setInterceptionState(InterceptionState::INTERCEPTING);
+		if(startstopinterception) setInterceptionState(InterceptionState::INTERCEPTING);
 	} else {
 		keyToPress = newkey;
 	}
 	if (autosave) save();
 }
-void Macro::setEnabled(bool status, bool autosave) {
+void Macro::setEnabled(bool status, bool autosave, bool startstopinterception) {
 	if (isIntercepting()) {
-		setInterceptionState(InterceptionState::STOPPED);
+		if(startstopinterception) setInterceptionState(InterceptionState::STOPPED);
 		enabled = status;
-		setInterceptionState(InterceptionState::INTERCEPTING);
+		if(startstopinterception) setInterceptionState(InterceptionState::INTERCEPTING);
 	} else {
 		enabled = status;
 	}
@@ -74,16 +74,16 @@ void Macro::runActions() {
 	}
 }
 
-void Macro::addAction(Action newAction, bool autosave) {
+void Macro::addAction(Action newAction, bool autosave, bool startstopinterception) {
 	if (newAction.getName().empty()) return;
 	for (auto action : actions) {
 		if (action->getName() == newAction.getName())
 			return;
 	}
 	if (isIntercepting()) {
-		setInterceptionState(InterceptionState::STOPPED);
+		if(startstopinterception) setInterceptionState(InterceptionState::STOPPED);
 		actions.push_back(new Action(newAction));
-		setInterceptionState(InterceptionState::INTERCEPTING);
+		if(startstopinterception) setInterceptionState(InterceptionState::INTERCEPTING);
 	} else {
 		actions.push_back(new Action(newAction));
 	}
@@ -116,22 +116,22 @@ void Macro::deleteAction(std::string name) {
 		}
 	}
 }
-void Macro::removeAction(Action* toRemove, bool autosave) {
+void Macro::removeAction(Action* toRemove, bool autosave, bool startstopinterception) {
 	if (isIntercepting()) {
-		setInterceptionState(InterceptionState::STOPPED);
+		if(startstopinterception) setInterceptionState(InterceptionState::STOPPED);
 		deleteAction(toRemove);
-		setInterceptionState(InterceptionState::INTERCEPTING);
+		if(startstopinterception) setInterceptionState(InterceptionState::INTERCEPTING);
 	}
 	else {
 		deleteAction(toRemove);
 	}
 	if (autosave) save();
 }
-void Macro::removeAction(std::string name, bool autosave) {
+void Macro::removeAction(std::string name, bool autosave, bool startstopinterception) {
 	if (isIntercepting()) {
-		setInterceptionState(InterceptionState::STOPPED);
+		if(startstopinterception) setInterceptionState(InterceptionState::STOPPED);
 		deleteAction(name);
-		setInterceptionState(InterceptionState::INTERCEPTING);
+		if(startstopinterception) setInterceptionState(InterceptionState::INTERCEPTING);
 	} else {
 		deleteAction(name);
 	}

@@ -60,6 +60,7 @@ void MacroEditorUI::updateGUI() {
 		std::string str;
 		if (key > 0) str = Converter::virtualCodeToString(key);
 		else str = "N/A";
+		BackendUtils::findAndReplaceAll(str, "\n", " ");
 		ui.interceptedKeyText->setText(QString::fromStdString(str));
 		ui.enabledBox->setChecked(currentMacro->isEnabled());
 		ui.actionList->clear();
@@ -81,7 +82,7 @@ void MacroEditorUI::setNewMacro(Macro* m) {
 void MacroEditorUI::createNewAction(std::string name) {
 	if (currentMacro != nullptr) {
 		Action action(name);
-		currentMacro->addAction(action, true);
+		currentMacro->addAction(action, true, true);
 		updateGUI();
 	}
 }
@@ -92,13 +93,15 @@ void MacroEditorUI::setStyleSheet(const QString& styleSheet) {
 
 void MacroEditorUI::saveMacroAction() {
 	if (currentMacro != nullptr && !isRegistering()) {
+		setInterceptionState(InterceptionState::STOPPED);
 		currentMacro->save();
+		setInterceptionState(InterceptionState::INTERCEPTING);
 	}
 }
 
 void MacroEditorUI::saveMacroAction(int state) {
 	if (currentMacro != nullptr && !isRegistering()) {
-		currentMacro->setEnabled(state, true);
+		currentMacro->setEnabled(state, true, true);
 	}
 }
 
@@ -110,7 +113,7 @@ void MacroEditorUI::closeEvent(QCloseEvent* event) {
 }
 
 void MacroEditorUI::newAction() {
-	if (!isRegistering() && isIntercepting()) {
+	if (!isRegistering()) {
 		AddMacroUI *addUI = app->getAddMacroUI();
 		addUI->reset();
 		addUI->setType(2);
@@ -127,7 +130,7 @@ void MacroEditorUI::removeAction() {
 			app->getActionEditorUI()->close();
 		}
 
-		currentMacro->removeAction(name, true);
+		currentMacro->removeAction(name, true, true);
 		updateGUI();
 		
 	}
@@ -139,7 +142,7 @@ void MacroEditorUI::keyChooseAction() {
 
 void MacroEditorUI::newInterceptedKey(int k) {
 	if (currentMacro != nullptr) {
-		currentMacro->setKey(k, true);
+		currentMacro->setKey(k, true, true);
 		updateGUI();
 	}
 }
@@ -153,11 +156,11 @@ void MacroEditorUI::saveMacroNameAction() {
 	Macro macro;
 	
 	macro.setName(ui.macroNameText->text().toStdString());
-	macro.setKey(currentMacro->getRequiredKey(), false);
-	macro.setEnabled(currentMacro->isEnabled(), false);
+	macro.setKey(currentMacro->getRequiredKey(), false, true);
+	macro.setEnabled(currentMacro->isEnabled(), false, true);
 	
 	for (auto a : currentMacro->getActions()) {
-		macro.addAction(Action(a->getName(), a->getKeysToPress(), a->getPathToProgram(), a->getType(), a->getAreKeysHeld()), false);
+		macro.addAction(Action(a->getName(), a->getKeysToPress(), a->getPathToProgram(), a->getType(), a->getAreKeysHeld()), false, true);
 	}
 	
 	macroManager.unregisterMacro(pastName);

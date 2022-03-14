@@ -26,7 +26,7 @@ MacroApp* app;
 /*
 *  APP VERSION THING MAKE SURE TO CHANGE THIS EVERY UPDATE.
 */
-std::string APP_VERSION = "1.0";
+std::string APP_VERSION = "1.1";
 
 void createConsole() {
     AllocConsole();

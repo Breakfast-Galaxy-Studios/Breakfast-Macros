@@ -27,11 +27,6 @@ HANDLE interceptionHandle;
 InterceptionContext context;
 InterceptionState state;
 
-enum ScanCode {
-	esc = 1,
-	numlock = 69
-};
-
 bool operator==(const InterceptionKeyStroke& first, const InterceptionKeyStroke& second) {
 	return first.code == second.code && first.state == second.state;
 }
@@ -108,7 +103,10 @@ DWORD WINAPI thread_interception(LPVOID lpParam) {
 		while (interception_receive(context, device = interception_wait(context), (InterceptionStroke*)&stroke, 1) > 0) {
 			size_t pressedDeviceID = interception_get_hardware_id(context, device, hardware_id, sizeof(hardware_id));
 			if (deviceID == pressedDeviceID) {
-				//std::cout << stroke.code << std::endl;
+				if (stroke.code == 69) {
+					interception_send(context, device, (InterceptionStroke*)&stroke, 1);
+					continue;
+				}
 				bool hasMacro = false;
 				for (Macro* macro : macroManager.getMacros()) {
 					if (macro != nullptr && macro->isEnabled() && Converter::rawCodeToVirtual(stroke) == macro->getRequiredKey()) {
