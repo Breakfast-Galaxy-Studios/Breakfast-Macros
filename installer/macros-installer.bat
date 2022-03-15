@@ -31,7 +31,7 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 
-Set LATEST_REPO_LINK="https://github.com/Breakfast-Galaxy-Studios/Breakfast-Macros/releases/download/1.0/app.zip"
+Set LATEST_REPO_LINK="https://github.com/Breakfast-Galaxy-Studios/Breakfast-Macros/releases/download/1.1/app.zip"
 
 echo Choose a folder to install macros in
 

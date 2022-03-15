@@ -11,6 +11,7 @@
 #include "InterceptionHandler.h"
 #include "AddMacroUI.h"
 
+
 size_t deviceID;
 int keyToAppend;
 bool openOnStartup;
@@ -19,6 +20,7 @@ bool minimizeToTray;
 bool minimizeOnStart;
 bool debugMode;
 bool typeNonMacroKeys;
+
 MacroManager macroManager;
 FileManager fileManager;
 MacroApp* app;
@@ -26,7 +28,7 @@ MacroApp* app;
 /*
 *  APP VERSION THING MAKE SURE TO CHANGE THIS EVERY UPDATE.
 */
-std::string APP_VERSION = "1.1";
+std::string APP_VERSION = "1.1"; 
 
 void createConsole() {
     AllocConsole();
