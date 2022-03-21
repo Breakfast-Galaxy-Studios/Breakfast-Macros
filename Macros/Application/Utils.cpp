@@ -39,7 +39,30 @@ std::string BackendUtils::getExePath() {
 		return NULL;
 	}
 }
+std::string truncateFilePath(std::string path) {
+	std::string finalPath;
 
+	std::string currentSection;
+	char arr[path.size() + 1];
+	strcpy(arr, path.c_str());
+	for (auto c : arr) {
+		if (c == '.') {
+			break;
+		}
+		else if (c == '\\' || c == '\\') {
+			currentsection += c;
+			finalPath += currentsection;
+			currentsection = ''
+				continue;
+		}
+		else {
+			currentsection += c;
+		}
+	}
+
+
+	return finalPath;
+}
 void BackendUtils::toggleOpenOnStartup() {
 	if (openOnStartup) {
 		CoInitialize(NULL);
@@ -51,6 +74,7 @@ void BackendUtils::toggleOpenOnStartup() {
 			std::wstring stmp = Converter::s2ws(exepathstring);
 			LPCWSTR exepath = stmp.c_str();
 			pShellLink->SetPath(exepath);
+			pShellLink->SetWorkingDirectory();
 			pShellLink->SetDescription(L"Breakfast Macros");
 			pShellLink->SetIconLocation(exepath, 0);
 			IPersistFile *pPersistFile;

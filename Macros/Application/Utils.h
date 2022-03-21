@@ -13,6 +13,7 @@ namespace BackendUtils {
 	std::string getExePath();
 	void toggleOpenOnStartup();
 	void checkForUpdates();
+	std::string truncateFilePath(std::string path);
 	template<typename T>
 	inline bool isIntegral(const T& value) {
 		return std::is_integral_v<T>;
