@@ -3,4 +3,5 @@
 ################################################################################
 
 /.vs
-/Macros/.vs/Macros/v17
+/Macros/.vs/Macros
+/Macros/Application/x64
