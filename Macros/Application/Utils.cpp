@@ -39,30 +39,32 @@ std::string BackendUtils::getExePath() {
 		return NULL;
 	}
 }
-std::string truncateFilePath(std::string path) {
+
+std::string BackendUtils::truncateFilePath(std::string path) {
 	std::string finalPath;
 
-	std::string currentSection;
-	char arr[path.size() + 1];
+	std::string currentsection;
+
+	char arr[path.length() + 1];
 	strcpy(arr, path.c_str());
-	for (auto c : arr) {
+	for (char c : arr) {
 		if (c == '.') {
 			break;
 		}
-		else if (c == '\\' || c == '\\') {
+		if (c == '\\') {
 			currentsection += c;
 			finalPath += currentsection;
-			currentsection = ''
-				continue;
+			currentsection = "";
 		}
 		else {
 			currentsection += c;
 		}
 	}
+	if (finalPath.length() > 0) return finalPath.substr(0, finalPath.length() - 1);
 
-
-	return finalPath;
+	else return finalPath;
 }
+
 void BackendUtils::toggleOpenOnStartup() {
 	if (openOnStartup) {
 		CoInitialize(NULL);
@@ -73,8 +75,13 @@ void BackendUtils::toggleOpenOnStartup() {
 			std::string exepathstring = getExePath();
 			std::wstring stmp = Converter::s2ws(exepathstring);
 			LPCWSTR exepath = stmp.c_str();
+			exepathstring = truncateFilePath(exepathstring);
+			stmp = Converter::s2ws(exepathstring);
+			LPCWSTR workingdir = stmp.c_str();
+
+
 			pShellLink->SetPath(exepath);
-			pShellLink->SetWorkingDirectory();
+			pShellLink->SetWorkingDirectory(workingdir);
 			pShellLink->SetDescription(L"Breakfast Macros");
 			pShellLink->SetIconLocation(exepath, 0);
 			IPersistFile *pPersistFile;
