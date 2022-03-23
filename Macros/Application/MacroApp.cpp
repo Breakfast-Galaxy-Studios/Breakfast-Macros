@@ -8,6 +8,7 @@
 extern bool darkMode;
 extern bool debugMode;
 extern bool minimizeToTray;
+extern bool minimizeOnStart;
 extern MacroManager macroManager;
 
 
@@ -63,30 +64,11 @@ MacroApp::MacroApp(QWidget *parent) : QMainWindow(parent) {
     //Window Settings
     setupInterception();
 
-}
-
-void MacroApp::closeEvent(QCloseEvent* event) {
-    QApplication::closeAllWindows();
-    close();
-    cleanupInterception();
-}
-
-void MacroApp::openMacroEditor(const QModelIndex& index) {
-    QListWidgetItem* item = ui.listWidget->currentItem();
-    if (item != nullptr) {
-        macroEditUI->setNewMacro(macroManager.getMacro(item->text().toStdString()));
-        macroEditUI->show();
+    if (minimizeOnStart) {
+        closeToTray();
     }
 }
 
-void MacroApp::RestoreWindowTrigger(QSystemTrayIcon::ActivationReason RW) {
-    if (RW == QSystemTrayIcon::DoubleClick) {
-        this->show();;
-        if(debugMode) ::ShowWindow(::GetConsoleWindow(), SW_SHOW);
-        ::ShowWindow((HWND)this->winId(), SW_RESTORE);
-        sysTrayIcon->hide();
-    }
-}
 
 void MacroApp::changeEvent(QEvent* e) {
     switch (e->type()) {
@@ -97,21 +79,10 @@ void MacroApp::changeEvent(QEvent* e) {
     case QEvent::WindowStateChange: {
         if (this->windowState() & Qt::WindowMinimized) {
             if (minimizeToTray) {
-                QTimer::singleShot(250, this, SLOT(hide()));
-                QTimer::singleShot(250, macroEditUI, SLOT(hide()));
-                QTimer::singleShot(250, deviceUI, SLOT(hide()));
-                QTimer::singleShot(250, actionEditorUI, SLOT(hide()));
-                QTimer::singleShot(250, settingsUI, SLOT(hide()));
-                QTimer::singleShot(250, virtualKeyboardUI, SLOT(hide()));
-                if (isRegistering()) {
-                    setInterceptionState(InterceptionState::INTERCEPTING);
-                }
-                ::ShowWindow(::GetConsoleWindow(), SW_HIDE);
-                sysTrayIcon->show();
-
+                closeToTray();
             }
             else {
-                this->showMinimized();
+                this->showNormal();
             }
         }
     }break;
@@ -213,6 +184,43 @@ void MacroApp::updateTheme() {
     trayIconMenu->setStyleSheet(stylesheet);
     listContextMenu->setStyleSheet(stylesheet);
     ui.settingsButton->setIcon(QIcon(QString::fromStdString(settingsIconPath)));
+}
+
+void MacroApp::closeEvent(QCloseEvent* event) {
+    QApplication::closeAllWindows();
+    close();
+    cleanupInterception();
+}
+
+void MacroApp::openMacroEditor(const QModelIndex& index) {
+    QListWidgetItem* item = ui.listWidget->currentItem();
+    if (item != nullptr) {
+        macroEditUI->setNewMacro(macroManager.getMacro(item->text().toStdString()));
+        macroEditUI->show();
+    }
+}
+
+void MacroApp::RestoreWindowTrigger(QSystemTrayIcon::ActivationReason RW) {
+    if (RW == QSystemTrayIcon::DoubleClick) {
+        this->show();;
+        if (debugMode) ::ShowWindow(::GetConsoleWindow(), SW_SHOW);
+        ::ShowWindow((HWND)this->winId(), SW_RESTORE);
+        sysTrayIcon->hide();
+    }
+}
+
+void MacroApp::closeToTray() {
+    QTimer::singleShot(250, this, SLOT(hide()));
+    QTimer::singleShot(250, macroEditUI, SLOT(hide()));
+    QTimer::singleShot(250, deviceUI, SLOT(hide()));
+    QTimer::singleShot(250, actionEditorUI, SLOT(hide()));
+    QTimer::singleShot(250, settingsUI, SLOT(hide()));
+    QTimer::singleShot(250, virtualKeyboardUI, SLOT(hide()));
+    if (isRegistering()) {
+        setInterceptionState(InterceptionState::INTERCEPTING);
+    }
+    ::ShowWindow(::GetConsoleWindow(), SW_HIDE);
+    sysTrayIcon->show();
 }
 
 Ui::MacroAppClass& MacroApp::getUI() {

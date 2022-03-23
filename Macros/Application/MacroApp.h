@@ -2,17 +2,18 @@
 
 #include <QtWidgets/QMainWindow>
 #include <qfile>
+#include <qtimer.h>
+#include <qmenu.h>
+#include <qsystemtrayicon.h>
 #include <string>
+#include <filesystem>
+
 #include "ui_MacroApp.h"
 #include "Settings.h"
 #include "DeviceUI.h"
 #include "ActionEditor.h"
 #include "MacroEditorUI.h"
 #include "AddMacroUI.h"
-#include <filesystem>
-#include <qtimer.h>
-#include <qmenu.h>
-#include <qsystemtrayicon.h>
 #include "VirtualKeyboard.h"
 
 class MacroApp : public QMainWindow
@@ -54,4 +55,5 @@ private:
     QSystemTrayIcon* sysTrayIcon;
     void changeEvent(QEvent* e);
     void closeEvent(QCloseEvent* event);
+    void closeToTray();
 };
