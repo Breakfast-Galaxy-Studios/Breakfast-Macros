@@ -1,11 +1,6 @@
 #pragma once
-#include <ShlObj.h>
-#include <atlthunk.h>
-#include <filesystem>
-#include <fstream>
-#include <iostream>
 #include <string>
-#include <Windows.h>
+#include <iostream>
 
 namespace BackendUtils {
 

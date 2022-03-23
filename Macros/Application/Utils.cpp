@@ -1,9 +1,13 @@
+#include <curl/curl.h>
+#include <ShlObj.h>
+#include <atlthunk.h>
+#include <filesystem>
+#include <fstream>
+#include <Windows.h>
 #include "Utils.h"
 #include "FileManager.h"
 #include "MacroApp.h"
 #include "json.hpp"
-#include <curl/curl.h>
-#include <iostream>
 
 extern bool darkMode;
 extern bool openOnStartup;
