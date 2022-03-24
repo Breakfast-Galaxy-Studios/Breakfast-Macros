@@ -26,8 +26,6 @@ public:
 	std::filesystem::path getAppDir();
 	void loadSettings();
 	void loadMacros();
-	void loadResources();
-	void setStyleContents(std::string path, std::string basedir, bool isdark);
 	bool setup();
 
 };

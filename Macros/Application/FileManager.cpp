@@ -426,60 +426,6 @@ void FileManager::loadMacros()          {
 	Logger::print("MACRO: Loaded ", amount, " macro(s).");
 }
 
-void FileManager::setStyleContents(std::string path,std::string basedir, bool isdark) {
-	std::ifstream file(path);
-	if (!file.is_open()) {
-		abort();
-	}
-
-	vector<std::string> lines;
-	string line;
-	while (getline(file, line)) {
-		if (line.find("image: url") != string::npos) {
-			string temp2;
-			for (int i = line.length() - 1; i >= 0; i--) {
-				char ooga = line.at(i);
-				if (ooga != ';' && ooga != ')' && ooga != '"') {
-					if (ooga == '\\' || ooga == '/') {
-						break;
-					}
-					temp2 += ooga;
-				}
-			}
-			
-			std::reverse(temp2.begin(), temp2.end());
-			line = "  image: url(\"";
-			line += basedir;
-			BackendUtils::findAndReplaceAll(line, "\\", "/");
-			if(isdark) line += "/resources/qdarkstyle/dark/rc/";
-			else line += "/resources/qdarkstyle/light/rc/";
-			line += temp2;
-			line += "\");";
-		}
-		line += "\n";
-;		lines.push_back(line);
-	}
-
-	file.close();
-	std::filesystem::remove(path);
-	
-	std::ofstream f(path);
-	for (auto a : lines) {
-		f << a;
-	}
-}
-void FileManager::loadResources() {
-	string basedir = std::filesystem::current_path().string();
-	string dark = basedir;
-	string light = basedir;
-
-	dark += "\\resources\\qdarkstyle\\dark\\style.qss";
-	light += "\\resources\\qdarkstyle\\light\\style.qss";
-
-	setStyleContents(dark, basedir, true);
-	setStyleContents(light, basedir, false);
-}
-
 std::filesystem::path FileManager::getAppDir() {
 	PWSTR tmp;
 	auto folderValue = SHGetKnownFolderPath(FOLDERID_RoamingAppData, 0, nullptr, &tmp);
@@ -509,7 +455,6 @@ bool FileManager::setup() {
 		(CreateDirectory(macrosDir.c_str(), NULL) || ERROR_ALREADY_EXISTS == GetLastError())) {
 		//proceed with file creation and reading of configs.
 
-		loadResources();
 		loadSettings();
 		loadMacros();
 

@@ -24,28 +24,15 @@ MacroApp::MacroApp(QWidget *parent) : QMainWindow(parent) {
 
 
     auto showWindow = new QAction(tr("&Show Menu"), this);
-    connect(showWindow, &QAction::triggered, [this]()
-        {
-            RestoreWindowTrigger(QSystemTrayIcon::DoubleClick);
-        });
-
     auto exitAction = new QAction(tr("&Exit"), this);
-    connect(exitAction, &QAction::triggered, [this]()
-        {
-            close();
-            /*
-            dont forget to fix this so everything stops and stuff like if they're recording a device
-            */
-        });
+
     trayIconMenu = new QMenu(this);
     trayIconMenu->addAction(showWindow);
     trayIconMenu->addAction(exitAction);
 
     sysTrayIcon = new QSystemTrayIcon(this);
     sysTrayIcon->setContextMenu(trayIconMenu);
-    std::string str = std::filesystem::current_path().string();
-    str += "\\resources\\logo.png";
-    sysTrayIcon->setIcon(QIcon(QString::fromStdString(str)));
+    sysTrayIcon->setIcon(QIcon(":/MacroApp/logo.png"));
     sysTrayIcon->connect(sysTrayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(RestoreWindowTrigger(QSystemTrayIcon::ActivationReason)));
     sysTrayIcon->setToolTip("Breakfast Macros");
 
@@ -55,7 +42,9 @@ MacroApp::MacroApp(QWidget *parent) : QMainWindow(parent) {
     ui.listWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     updateTheme();   
     updateMacroList();
-   
+
+    connect(showWindow, &QAction::triggered, [this]() { RestoreWindowTrigger(QSystemTrayIcon::DoubleClick); });
+    connect(exitAction, &QAction::triggered, [this]() { close(); });
     connect(ui.settingsButton, SIGNAL(clicked()), this, SLOT(settingsButtonAction()));
     connect(ui.deleteMacroButton, SIGNAL(clicked()), this, SLOT(deleteMacroAction()));
     connect(ui.newMacroButton, SIGNAL(clicked()), this, SLOT(newMacroButtonAction()));
@@ -151,39 +140,31 @@ void MacroApp::listContextMenuAction(const QPoint &pos) {
 }
 
 void MacroApp::updateTheme() {
-    std::string settingsIconPath = std::filesystem::current_path().string();
-    std::string styleSheetPath = settingsIconPath;
+    std::string settingsPath = ":/resources/icon%COLOR%.png";
+    std::string styleSheetPath = ":/resources/qdarkstyle/%COLOR%/style.qss";
     if (darkMode) {
-        styleSheetPath += "\\resources\\qdarkstyle\\dark\\style.qss";
-        settingsIconPath += "\\resources\\iconblack.png";
+        BackendUtils::findAndReplaceAll(settingsPath, "%COLOR%", "black");
+        BackendUtils::findAndReplaceAll(styleSheetPath, "%COLOR%", "dark");
     }
     else {
-        styleSheetPath += "\\resources\\qdarkstyle\\light\\style.qss";
-        settingsIconPath += "\\resources\\iconwhite.png";
+        BackendUtils::findAndReplaceAll(settingsPath, "%COLOR%", "white");
+        BackendUtils::findAndReplaceAll(styleSheetPath, "%COLOR%", "light");
     }
-    QFile f(QString::fromStdString(styleSheetPath));
 
-    if (!f.exists()) {
-        die("A stylesheet could not be found.");
-        return;
-    } if (!std::filesystem::exists(settingsIconPath)) {
-        die("An icon could not be found.");
-        return;
+    QFile settingsFile(QString::fromStdString(settingsPath));
+    QFile styleSheetFile(QString::fromStdString(styleSheetPath));
+
+    if (!settingsFile.exists()) {
+        Logger::print("Unable to set settings icon, file not found", "");
+    } else if (!styleSheetFile.exists()) {
+        Logger::print("Unable to set stylesheet, file not found.", "");
+        
+    } else {
+        styleSheetFile.open(QFile::ReadOnly | QFile::Text);
+        QTextStream ts(&styleSheetFile);
+        qApp->setStyleSheet(ts.readAll());
+        ui.settingsButton->setIcon(QIcon(QString::fromStdString(settingsPath)));
     }
-    f.open(QFile::ReadOnly | QFile::Text);
-    QTextStream ts(&f);
-    QString stylesheet = ts.readAll();
-    this->setStyleSheet(stylesheet);
-
-    settingsUI->setStyleSheet(stylesheet);
-    macroEditUI->setStyleSheet(stylesheet);
-    deviceUI->setStyleSheet(stylesheet);
-    actionEditorUI->setStyleSheet(stylesheet);
-    addMacroUI->setStyleSheet(stylesheet);
-    virtualKeyboardUI->setStyleSheet(stylesheet);
-    trayIconMenu->setStyleSheet(stylesheet);
-    listContextMenu->setStyleSheet(stylesheet);
-    ui.settingsButton->setIcon(QIcon(QString::fromStdString(settingsIconPath)));
 }
 
 void MacroApp::closeEvent(QCloseEvent* event) {
